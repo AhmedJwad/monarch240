@@ -21,51 +21,51 @@ namespace monarch240.Controllers
 
         // GET: DrAbsCals
         public async Task<IActionResult> Index(
-    string sortOrder,
-    string currentFilter,
-    string searchString,
-    int? pageNumber)
-        {
-            ViewData["CurrentSort"] = sortOrder;
-            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+                    string sortOrder,
+                    string currentFilter,
+                    string searchString,
+                    int? pageNumber)
+                {
+                    ViewData["CurrentSort"] = sortOrder;
+                    ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+                    ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
 
-            if (searchString != null)
-            {
-                pageNumber = 1;
-            }
-            else
-            {
-                searchString = currentFilter;
-            }
+                    if (searchString != null)
+                    {
+                        pageNumber = 1;
+                    }
+                    else
+                    {
+                        searchString = currentFilter;
+                    }
 
-            ViewData["CurrentFilter"] = searchString;
+                    ViewData["CurrentFilter"] = searchString;
 
-            var drAbsCals = from s in _context.DrAbsCals
-                           select s;
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                drAbsCals = drAbsCals.Where(s => s.TestName.Contains(searchString)
-                                       || s.TestName.Contains(searchString));
-            }
-            switch (sortOrder)
-            {
-                case "name_desc":
-                    drAbsCals = drAbsCals.OrderByDescending(s => s.TestName);
-                    break;
-                case "Date":
-                    drAbsCals = drAbsCals.OrderBy(s => s.TestDate);
-                    break;
-                case "date_desc":
-                    drAbsCals = drAbsCals.OrderByDescending(s => s.BackInt1);
-                    break;
-                default:
-                    drAbsCals = drAbsCals.OrderBy(s => s.BackStr2);
-                    break;
-            }
+                    var drAbsCals = from s in _context.DrAbsCals
+                                   select s;
+                    if (!String.IsNullOrEmpty(searchString))
+                    {
+                        drAbsCals = drAbsCals.Where(s => s.TestName.Contains(searchString)
+                                               || s.TestName.Contains(searchString));
+                    }
+                    switch (sortOrder)
+                    {
+                        case "name_desc":
+                            drAbsCals = drAbsCals.OrderByDescending(s => s.TestName);
+                            break;
+                        case "Date":
+                            drAbsCals = drAbsCals.OrderBy(s => s.TestDate);
+                            break;
+                        case "date_desc":
+                            drAbsCals = drAbsCals.OrderByDescending(s => s.BackInt1);
+                            break;
+                        default:
+                            drAbsCals = drAbsCals.OrderBy(s => s.BackStr2);
+                            break;
+                    }
 
-            int pageSize = 10;
-            return View(await PaginatedList<DrAbsCal>.CreateAsync(drAbsCals.AsNoTracking(), pageNumber ?? 1, pageSize));
+                    int pageSize = 10;
+                    return View(await PaginatedList<DrAbsCal>.CreateAsync(drAbsCals.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
        
 

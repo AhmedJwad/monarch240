@@ -1,4 +1,4 @@
-﻿@model PaginatedList<monarch240.Models.DrAbsCal>
+﻿@model PaginatedList<monarch240.Models.DrAbsDatum>
 
 @{
     ViewData["Title"] = "Index";
@@ -18,72 +18,77 @@
         </p>
     </div>
 </form>
-
-<table class="table">
-                    <thead>
+<table  class="table table-striped">
+    <thead>
         <tr>
             <th>
-                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">TestId</a>             
+                TestId
             </th>
             <th>
-                TestId
+                TestNo
             </th>
             <th>
                 TestName
             </th>
             <th>
-              TestCupNo
+                TestCupNo
             </th>
             <th>
-               TestCyc
+                TestCyc
             </th>
             <th>
-               StdId
+                AdWaveP
             </th>
             <th>
-               Count
+                Pvalue
             </th>
             <th>
-               AdWaveP
-            </th>
-            <th>
-               Pvalue
-            </th>
-            <th>
-              AdWaveS
+                AdWaveS
             </th>
             <th>
                 Svalue
             </th>
             <th>
-               ValueFlag
+                ValueFlag
             </th>
             <th>
-               TestDate
+                TestDate
             </th>
             <th>
-               TestTime
+                TestTime
             </th>
             <th>
-              BackStr1
+                TestName1
             </th>
             <th>
-               BackStr2
+                SerumFlag
             </th>
             <th>
-              BackInt1
+                BackStr1
             </th>
             <th>
-               BackInt2
+                BackStr2
+            </th>
+            <th>
+                BackInt1
+            </th>
+            <th>
+                BackInt2
+            </th>
+            <th>
+                SsmaTimeStamp
             </th>
             <th></th>
         </tr>
     </thead>
-                    <tbody>
+    <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.TestId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestNo)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TestName)
@@ -93,12 +98,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TestCyc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StdId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Count)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AdWaveP)
@@ -122,6 +121,12 @@
                 @Html.DisplayFor(modelItem => item.TestTime)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.TestName1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SerumFlag)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.BackStr1)
             </td>
             <td>
@@ -134,6 +139,9 @@
                 @Html.DisplayFor(modelItem => item.BackInt2)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.SsmaTimeStamp)
+            </td>
+            <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
@@ -141,8 +149,8 @@
         </tr>
 }
     </tbody>
-                </table>
-          
+</table>
+
 @{
     var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
     var nextDisabled = !Model.HasNextPage ? "disabled" : "";

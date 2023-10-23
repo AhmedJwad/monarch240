@@ -1,0 +1,103 @@
+﻿@model monarch240.Models.DrAbsDatum
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>DrAbsDatum</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TestId" class="control-label"></label>
+                <input asp-for="TestId" class="form-control" />
+                <span asp-validation-for="TestId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TestNo" class="control-label"></label>
+                <input asp-for="TestNo" class="form-control" />
+                <span asp-validation-for="TestNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TestName" class="control-label"></label>
+                <input asp-for="TestName" class="form-control" />
+                <span asp-validation-for="TestName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TestCupNo" class="control-label"></label>
+                <input asp-for="TestCupNo" class="form-control" />
+                <span asp-validation-for="TestCupNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TestCyc" class="control-label"></label>
+                <input asp-for="TestCyc" class="form-control" />
+                <span asp-validation-for="TestCyc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdWaveP" class="control-label"></label>
+                <input asp-for="AdWaveP" class="form-control" />
+                <span asp-validation-for="AdWaveP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pvalue" class="control-label"></label>
+                <input asp-for="Pvalue" class="form-control" />
+                <span asp-validation-for="Pvalue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdWaveS" class="control-label"></label>
+                <input asp-for="AdWaveS" class="form-control" />
+                <span asp-validation-for="AdWaveS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Svalue" class="control-label"></label>
+                <input asp-for="Svalue" class="form-control" />
+                <span asp-validation-for="Svalue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValueFlag" class="control-label"></label>
+                <input asp-for="ValueFlag" class="form-control" />
+                <span asp-validation-for="ValueFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TestDate" class="control-label"></label>
+                <input asp-for="TestDate" class="form-control" />
+                <span asp-validation-for="TestDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TestTime" class="control-label"></label>
+                <input asp-for="TestTime" class="form-control" />
+                <span asp-validation-for="TestTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TestName1" class="control-label"></label>
+                <input asp-for="TestName1" class="form-control" />
+                <span asp-validation-for="TestName1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BackStr1" class="control-label"></label>
+                <input asp-for="BackStr1" class="form-control" />
+                <span asp-validation-for="BackStr1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BackStr2" class="control-label"></label>
+                <input asp-for="BackStr2" class="form-control" />
+                <span asp-validation-for="BackStr2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

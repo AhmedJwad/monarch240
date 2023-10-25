@@ -1,0 +1,246 @@
+﻿@model monarch240.Models.DrPatient
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>DrPatient</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PatId" />
+            <div class="form-group">
+                <label asp-for="PatTestNo" class="control-label"></label>
+                <input asp-for="PatTestNo" class="form-control" />
+                <span asp-validation-for="PatTestNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatDisk" class="control-label"></label>
+                <input asp-for="PatDisk" class="form-control" />
+                <span asp-validation-for="PatDisk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatPosition" class="control-label"></label>
+                <input asp-for="PatPosition" class="form-control" />
+                <span asp-validation-for="PatPosition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatBarcode" class="control-label"></label>
+                <input asp-for="PatBarcode" class="form-control" />
+                <span asp-validation-for="PatBarcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatCaseNo" class="control-label"></label>
+                <input asp-for="PatCaseNo" class="form-control" />
+                <span asp-validation-for="PatCaseNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatType" class="control-label"></label>
+                <input asp-for="PatType" class="form-control" />
+                <span asp-validation-for="PatType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatName" class="control-label"></label>
+                <input asp-for="PatName" class="form-control" />
+                <span asp-validation-for="PatName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatSex" class="control-label"></label>
+                <input asp-for="PatSex" class="form-control" />
+                <span asp-validation-for="PatSex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatAge" class="control-label"></label>
+                <input asp-for="PatAge" class="form-control" />
+                <span asp-validation-for="PatAge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatAgeUnit" class="control-label"></label>
+                <input asp-for="PatAgeUnit" class="form-control" />
+                <span asp-validation-for="PatAgeUnit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatRoom" class="control-label"></label>
+                <input asp-for="PatRoom" class="form-control" />
+                <span asp-validation-for="PatRoom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatBedNo" class="control-label"></label>
+                <input asp-for="PatBedNo" class="form-control" />
+                <span asp-validation-for="PatBedNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatSampleType" class="control-label"></label>
+                <input asp-for="PatSampleType" class="form-control" />
+                <span asp-validation-for="PatSampleType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatDilute" class="control-label"></label>
+                <input asp-for="PatDilute" class="form-control" />
+                <span asp-validation-for="PatDilute" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatVolume" class="control-label"></label>
+                <input asp-for="PatVolume" class="form-control" />
+                <span asp-validation-for="PatVolume" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatCupType" class="control-label"></label>
+                <input asp-for="PatCupType" class="form-control" />
+                <span asp-validation-for="PatCupType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatProfile" class="control-label"></label>
+                <input asp-for="PatProfile" class="form-control" />
+                <span asp-validation-for="PatProfile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatSendingDate" class="control-label"></label>
+                <input asp-for="PatSendingDate" class="form-control" />
+                <span asp-validation-for="PatSendingDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatTestingDate" class="control-label"></label>
+                <input asp-for="PatTestingDate" class="form-control" />
+                <span asp-validation-for="PatTestingDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatReportDate" class="control-label"></label>
+                <input asp-for="PatReportDate" class="form-control" />
+                <span asp-validation-for="PatReportDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatTestTime" class="control-label"></label>
+                <input asp-for="PatTestTime" class="form-control" />
+                <span asp-validation-for="PatTestTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatDoctor" class="control-label"></label>
+                <input asp-for="PatDoctor" class="form-control" />
+                <span asp-validation-for="PatDoctor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatChecker" class="control-label"></label>
+                <input asp-for="PatChecker" class="form-control" />
+                <span asp-validation-for="PatChecker" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatAssessor" class="control-label"></label>
+                <input asp-for="PatAssessor" class="form-control" />
+                <span asp-validation-for="PatAssessor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatClinic" class="control-label"></label>
+                <input asp-for="PatClinic" class="form-control" />
+                <span asp-validation-for="PatClinic" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatRemark" class="control-label"></label>
+                <input asp-for="PatRemark" class="form-control" />
+                <span asp-validation-for="PatRemark" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatAuditingInfo" class="control-label"></label>
+                <input asp-for="PatAuditingInfo" class="form-control" />
+                <span asp-validation-for="PatAuditingInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatPrintInfo" class="control-label"></label>
+                <input asp-for="PatPrintInfo" class="form-control" />
+                <span asp-validation-for="PatPrintInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatResultInfo" class="control-label"></label>
+                <input asp-for="PatResultInfo" class="form-control" />
+                <span asp-validation-for="PatResultInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatStandBy" class="control-label"></label>
+                <input asp-for="PatStandBy" class="form-control" />
+                <span asp-validation-for="PatStandBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatFlag" class="control-label"></label>
+                <input asp-for="PatFlag" class="form-control" />
+                <span asp-validation-for="PatFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatBarFlag" class="control-label"></label>
+                <input asp-for="PatBarFlag" class="form-control" />
+                <span asp-validation-for="PatBarFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatRepeatCount" class="control-label"></label>
+                <input asp-for="PatRepeatCount" class="form-control" />
+                <span asp-validation-for="PatRepeatCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatSerumFlag" class="control-label"></label>
+                <input asp-for="PatSerumFlag" class="form-control" />
+                <span asp-validation-for="PatSerumFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatProfileItems" class="control-label"></label>
+                <input asp-for="PatProfileItems" class="form-control" />
+                <span asp-validation-for="PatProfileItems" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BackStr1" class="control-label"></label>
+                <input asp-for="BackStr1" class="form-control" />
+                <span asp-validation-for="BackStr1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BackStr2" class="control-label"></label>
+                <input asp-for="BackStr2" class="form-control" />
+                <span asp-validation-for="BackStr2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BackInt1" class="control-label"></label>
+                <input asp-for="BackInt1" class="form-control" />
+                <span asp-validation-for="BackInt1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BackInt2" class="control-label"></label>
+                <input asp-for="BackInt2" class="form-control" />
+                <span asp-validation-for="BackInt2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BFlag" class="control-label"></label>
+                <input asp-for="BFlag" class="form-control" />
+                <span asp-validation-for="BFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatSendingTime" class="control-label"></label>
+                <input asp-for="PatSendingTime" class="form-control" />
+                <span asp-validation-for="PatSendingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatReportTime" class="control-label"></label>
+                <input asp-for="PatReportTime" class="form-control" />
+                <span asp-validation-for="PatReportTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatSamplingDate" class="control-label"></label>
+                <input asp-for="PatSamplingDate" class="form-control" />
+                <span asp-validation-for="PatSamplingDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatSamplingTime" class="control-label"></label>
+                <input asp-for="PatSamplingTime" class="form-control" />
+                <span asp-validation-for="PatSamplingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

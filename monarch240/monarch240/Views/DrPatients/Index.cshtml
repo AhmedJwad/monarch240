@@ -1,0 +1,299 @@
+﻿@model IEnumerable<monarch240.Models.DrPatient>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PatTestNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatDisk)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatPosition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatBarcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatCaseNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatSex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatAgeUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatRoom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatBedNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatSampleType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatDilute)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatVolume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatCupType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatProfile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatSendingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatTestingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatReportDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatTestTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatDoctor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatChecker)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatAssessor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatClinic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatRemark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatAuditingInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatPrintInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatResultInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatStandBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatBarFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatRepeatCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatSerumFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatProfileItems)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BackStr1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BackStr2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BackInt1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BackInt2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatSendingTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatReportTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatSamplingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatSamplingTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SsmaTimeStamp)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatTestNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatDisk)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatPosition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatBarcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatCaseNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatSex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatAgeUnit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatRoom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatBedNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatSampleType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatDilute)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatVolume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatCupType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatProfile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatSendingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatTestingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatReportDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatTestTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatDoctor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatChecker)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatAssessor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatClinic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatRemark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatAuditingInfo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatPrintInfo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatResultInfo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatStandBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatBarFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatRepeatCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatSerumFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatProfileItems)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BackStr1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BackStr2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BackInt1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BackInt2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatSendingTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatReportTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatSamplingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatSamplingTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SsmaTimeStamp)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PatId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PatId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PatId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

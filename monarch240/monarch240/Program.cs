@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using monarch240.Helpers;
 using monarch240.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +10,7 @@ builder.Services.AddDbContext<DbaccessContext>(o =>
 {
     o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-
+builder.Services.AddScoped<IcommunicationService, CommunicationService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

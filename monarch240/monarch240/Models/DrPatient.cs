@@ -191,5 +191,5 @@ public partial class DrPatient
 
     public DateTime? PatSamplingTime { get; set; }
 
-    public byte[] SsmaTimeStamp { get; set; } = null!;
+    
 }

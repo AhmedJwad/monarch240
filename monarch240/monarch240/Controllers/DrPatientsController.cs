@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -115,35 +116,10 @@ namespace monarch240.Controllers
         {
             if (ModelState.IsValid)
             {
-                
 
-                if (drPatient != null)
-                {
-                    // Convert the data to a string for sending to the device
-                    string dataToSendToDevice = FormatData(drPatient);
-
-                    // Open the serial port and send the data asynchronously
-                    await _communicationService.OpenAsync("COM10", 19200, Parity.None, 8, StopBits.One);
-                    await _communicationService.SendCommandAsync(dataToSendToDevice);
-
-                    // Receive the response from the device asynchronously
-                    string response = await _communicationService.ReceiveResponseAsync();
-
-                    // Process the response from the device, if needed
-
-                    // Close the serial port
-                    await _communicationService.CloseAsync();
-
-                    _context.Add(drPatient);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
-                }
-                else
-                {
-                    return View("DataNotAvailable");
-                }
-
-                
+                _context.Add(drPatient);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
             return View(drPatient);
         }

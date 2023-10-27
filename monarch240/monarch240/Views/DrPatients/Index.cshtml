@@ -144,9 +144,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.PatSamplingTime)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SsmaTimeStamp)
-            </th>
+          
             <th></th>
         </tr>
     </thead>
@@ -285,9 +283,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.PatSamplingTime)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SsmaTimeStamp)
-            </td>
+           
             <td>
                 <a asp-action="Edit" asp-route-id="@item.PatId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.PatId">Details</a> |

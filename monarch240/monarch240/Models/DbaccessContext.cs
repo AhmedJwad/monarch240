@@ -136,10 +136,10 @@ public partial class DbaccessContext : DbContext
     public virtual DbSet<DrWashSample> DrWashSamples { get; set; }
 
     public virtual DbSet<DrWorkload> DrWorkloads { get; set; }
-    
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=dbaccess;Trusted_Connection=True;");
+        => optionsBuilder.UseSqlServer("Server=169.254.156.250;Database=dbaccess;Trusted_Connection=true;encrypt=false;trustServerCertificate=true;Integrated Security=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -2448,10 +2448,7 @@ public partial class DbaccessContext : DbContext
                 .HasDefaultValueSql("((0))")
                 .HasComment("样本体积")
                 .HasColumnName("Pat_Volume");
-            entity.Property(e => e.SsmaTimeStamp)
-                .IsRowVersion()
-                .IsConcurrencyToken()
-                .HasColumnName("SSMA_TimeStamp");
+           
         });
 
         modelBuilder.Entity<DrPatientType>(entity =>
